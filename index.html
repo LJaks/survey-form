@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">Survey Form</h1>
+        <p id="description">
+          Responsive Web Design Project - a Survey Form buit with CSS and HTML
+        </p>
+      </header>
+      <form action="" id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter your email"
+            required
+          />
+          <label for="age" id="number-label">Age</label>
+          <input
+            type="number"
+            id="number"
+            name="age"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Enter your age"
+          />
+        </div>
+        <fieldset class="form-group">
+          <legend>Choose one of these three options:</legend>
+          <label for="male"
+            ><input
+              class="input-radio"
+              type="radio"
+              id="male"
+              name="gender"
+            />Male</label
+          >
+          <label for="female"
+            ><input
+              class="input-radio"
+              type="radio"
+              id="female"
+              name="gender"
+            />Female</label
+          >
+          <label for="other"
+            ><input
+              class="input-radio"
+              type="radio"
+              id="other"
+              name="gender"
+            />Prefer not to say</label
+          >
+        </fieldset>
+        <div class="form-group">
+          <p>Whet is your current role?</p>
+          <select name="role" id="dropdown" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="job">Full Time Job</option>
+            <option value="student">Student</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>
+            Do you have experience in the following technologies?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+          <label
+            ><input
+              name="prefer"
+              value="HTML"
+              type="checkbox"
+              class="input-checkbox"
+            />HTML
+          </label>
+          <label
+            ><input
+              name="prefer"
+              value="CSS"
+              type="checkbox"
+              class="input-checkbox"
+            />CSS</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="JavaScript"
+              type="checkbox"
+              class="input-checkbox"
+            />JavaScript</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="React"
+              type="checkbox"
+              class="input-checkbox"
+            />React</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="GitHub"
+              type="checkbox"
+              class="input-checkbox"
+            />GitHub</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="Other"
+              type="checkbox"
+              class="input-checkbox"
+            />Other</label
+          >
+        </div>
+        <div class="form-group">
+          <p>What do you like most in programming?</p>
+          <textarea
+            class="text-area"
+            name="comment"
+            id="comment"
+            cols="30"
+            rows="10"
+            placeholder="Write what's on your mind..."
+          ></textarea>
+        </div>
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
