@@ -10,6 +10,7 @@
 html,
 body {
   margin: 0;
+  width: auto;
 }
 
 body {
@@ -18,15 +19,21 @@ body {
   background: var(--bc-main);
   color: var(--fc1);
   font-family: var(--ff);
+  font-size: var(--fs);
+  text-align: center;
 }
 
 .container {
   background-color: var(--bc-form);
   height: 100%;
+  max-width: 600px;
   display: flex;
+  justify-content: center;
+  align-self: center;
   flex-direction: column;
+  margin: 0 auto;
   border-radius: 15px;
-  padding: 20px;
+  padding: 20px 40px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
@@ -35,17 +42,22 @@ body {
 
 form {
   font-size: var(--fs);
+  text-align: start;
 }
 .form-group {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.form-group:first-child {
-  padding: 20px 0;
+.form-group p,
+.form-group legend {
+  font-weight: bold;
 }
-label {
-  padding: 10px 15px;
+.form-group:first-child {
+  padding: 5px 0 20px 0;
+}
+.form-group:first-child label {
+  margin: 15px 0 10px 15px;
 }
 input,
 select {
@@ -54,13 +66,26 @@ select {
   font-size: 20px;
   padding: 0 10px;
   border-color: transparent;
-  outline: none;
+  /* outline: none; */
 }
 fieldset {
   border-radius: 10px;
   border: none;
   margin: 0;
   padding: 0;
+}
+.input-radio,
+.input-checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  margin-right: 10px;
+}
+label {
+  margin: 5px 0 5px 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 button {
   border-radius: 50px;
@@ -72,7 +97,6 @@ button {
   line-height: 40px;
   font-size: var(--fs);
   border: none;
-  outline: none;
   margin: 20px auto;
   display: flex;
   align-items: center;
@@ -82,17 +106,12 @@ button:hover {
   background-color: var(--fc2);
   color: var(--fc1);
 }
-.input-checkbox,
-.input-radio {
-  width: 15px;
-  height: 15px;
-}
+
 #dropdown {
   font-family: var(--ff);
 }
 span {
   font-size: 15px;
-  color: #000;
   font-weight: bold;
 }
 textarea {
@@ -101,4 +120,40 @@ textarea {
   font-size: var(--fs);
   padding: 10px;
   font-family: var(--ff);
+}
+@media screen and (max-width: 370px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    padding: 20px;
+  }
+  body,
+  form,
+  input,
+  select,
+  span,
+  textarea {
+    font-size: 80%;
+    line-height: 20px;
+  }
+  .input-radio,
+  .input-checkbox {
+    width: 10px;
+    height: 10px;
+  }
+  label {
+    margin: 0 0 0 15px;
+  }
+  .form-group:first-child {
+    padding: 0 0 10px 0;
+  }
+  .form-group:first-child label {
+    margin: 10px 0 5px 5px;
+  }
+  button {
+    width: 100px;
+    height: 30px;
+    font-size: 90%;
+  }
 }
